@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File \".claude\\hooks\\check-ps1-syntax.ps1\"",
+            "timeout": 10,
+            "statusMessage": "Checking PS1 syntax..."
+          }
+        ]
+      }
+    ]
+  }
+}
